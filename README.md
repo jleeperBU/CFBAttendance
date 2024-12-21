@@ -1,5 +1,6 @@
-# CFBAttendance-DSC-630
-Introduction
+# CFBAttendance
+
+## Introduction
 
   College Football is one of the largest sporting leagues within the United States and can have lucrative costs and revenues associated with it. It is interesting to determine what considers a program successful, as well as external factors that may be at play when it comes to how those programs have longevity and excitement within the school and the fanbase. For these external factors, we can come away with a question that would be able to be answered through analytical data: Does team performance impact attendance, or does attendance impact team performance? 
 
@@ -14,7 +15,7 @@ This data is useful for this problem because we can determine many factors that 
 
 For this project, since we are wanting to possibly go through two separate routes with the data we have, we can have bidirectional analysis to determine if attendance impacts performance or vice versa. With this being said, many different models can come to mind when it comes to predicting this information. We could have a linear regression model to predict a continuous outcome based on some predictor variables, such as having a model predict attendance using team performance metrics, and another for predicting the team performance using the attendance metrics as well as the other factors that can come into play. Logistic regression tests can also be used to determine the probability of a win based on attendance. We can also use a Granger Causality Test, which can determine whether past attendance levels can predict future team performance and vice versa. This can help us understand the direction of causality between the two variables being examined.
 
-Methods/Results
+## Methods/Results
 
 With these models, I hope to test the different aspects of the relationship between team performance and attendance, and this could provide strong insights into the dynamics of how attendance is determined. 
 
@@ -26,15 +27,15 @@ For Granger Causality Test, we will be evaluating our p-value, which will prove 
 
 With the information we have, I hope to learn more about how accurate our predictions can be, as well as discovering exactly what our proposed question’s answer would be.
 
-Ethical Considerations
+## Ethical Considerations
 
 There are some risks and ethical implications that could be determined through this data. There could be bias and misinterpretation of the results, as some schools may feature a high attendance even if the performance is not up to standard. For example, Academy schools with D1 college football programs such as Navy & Army have a mandatory attendance for all cadets, which would skew the numbers for a higher fill rate. Other schools, such as West Virginia University, feature a program for free tickets for students for every game, which are going to be included in attendance even if a student does not attend. However, for the data that I will be using, this will be only used as a base level examination and testing. It will hopefully be able to determine exactly how the two variables, performance & attendance, can work together, but external factors that cannot be seen or posted within a spreadsheet will not be figured into the equation. 
 
-Data Questions & Answers
+## Data Questions & Answers
 
 For this assignment, the dataset contains variables that provide key information for both team performance (such as win/loss, ranking, and conference data) and attendance (fill rates, game day conditions, and more). This dataset allows for bi-directional analysis, where I can examine both the impact of performance on attendance and the effect of attendance on performance. Since the data spans several seasons (2000-2018) and includes various schools and conditions, there is enough information to answer these questions using statistical models like correlation and regression. However, careful consideration of external factors, such as weather and opponent rankings, is necessary to account for potential errors in my evaluation.
 
-Visualization Possibilities
+## Visualization Possibilities
 
 Several visualizations will help in explaining the relationship between attendance and team performance:
 
@@ -44,14 +45,14 @@ Several visualizations will help in explaining the relationship between attendan
 
 3.	Bar charts: Visualizing average attendance by team performance tiers (for example, ranked vs. unranked teams) will help illustrate any differences across categories.
 
-Data Adjustments
+## Data Adjustments
 
 While the data is comprehensive, adjustments may be necessary to better handle external variables that could affect the evaluation. For instance, controlling weather conditions at certain schools in colder regions may reduce the noise in the data and improve model accuracy. Additionally, it would be beneficial to consider breaking the analysis down by school size, conference, or region to see if the relationship between attendance and performance differs across these dimensions.
 
 As for the driving questions, the key question—whether attendance impacts performance or vice versa—remains relevant. However, considering the bi-directional nature of the analysis, I could refine the driving questions to focus on the direction and strength of the relationship. This could also include an exploration of the factors that most strongly influence this relationship.
 
 
-Preparing Data
+## Preparing Data
 
  For my data to be prepared, there needs to be a full understanding of what we are trying to find – this is a performance calculator, and an attendance calculator. Within the spreadsheet, I have added a new column of Cumulative Win Percentage – this takes the team’s current wins and losses, adds them up, and then creates a percentage of what is within the dataset. This will be my performance calculator, while the attendance calculator is already helpful with Fill Rate – Attendance divided by Stadium Capacity.
 
@@ -59,7 +60,7 @@ Preparing Data
  
 After completing these steps, I then went forward with the Linear Regression Model.
 
-Linear Regression Model
+### Linear Regression Model
 
  For this specific assignment and assessment, I chose to use a Linear Regression Model for determining if win percentage affects Fill Rate, and our Mean Squared Error is 3.5%, which means that our model is giving a prediction that is close to the actual value.
  
@@ -72,7 +73,7 @@ Linear Regression Model
 
 
 
-Granger Causality Test
+### Granger Causality Test
 	
  Within this, I wanted to Determine how these Cumulative Win Percentage and Fill Rate was in a bidirectional analysis such as the Granger Causality Test, and I was able to get these numbers.
   
@@ -92,11 +93,11 @@ Granger Causality Test
 
 For our graphing, we can see that P-values are rising each period, our F-Stat is lowering each period, and that they are still considered to have bi-directional causality.
  
- Interpretation
+## Interpretation
 	
  Within these models that I have gone over, I have determined that for our linear regression models, the data shows that team performance is effective for attendance, and that attendance is not effective for team performance. However, when using Granger Causality, we have determined that these do have bidirectional causality, which leads me to believe that there is an underlying influence that each number does have on one another. This is, I believe, to be due to a feedback loop – as A causes B, B then causes A to react. This means that this is not just a correlation between the two variables but that there is a causal relationship between them.
 
-Conclusion/Recommendations
+## Conclusion/Recommendations
 
  I believe that within this data I have found that there is a relationship between the two – team performance and attendance. Within our Granger Causality Test, our p-values were low that they remained statistically significant, although the F-test depreciation does lead me to believe there may be something to look to for potential issues. Although this may cause potential issues when comparing stats between years and team performance, we have been able to determine that the relationship between the two is correlated between each other, while regression is applicable between team performance towards attendance. 
 
@@ -104,7 +105,7 @@ Conclusion/Recommendations
 	
  For ethical concerns, mine does not have any specific concerns. However, if this were to be deployed and useful for a team, they may have more data that should not be made available to the public, such as students’ information. However, at a base level, this has been a great way for this data to be carried and explored.
 
-References
+## References
 
 Gallini, J. (2019, December 9). College football games (2000 to 2018). Kaggle. https://www.kaggle.com/datasets/jeffgallini/college-football-attendance-2000-to-2018 
 
